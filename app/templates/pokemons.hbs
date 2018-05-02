@@ -1,0 +1,14 @@
+{{simple-pagination nextOffset=nextOffset previousOffset=previousOffset }}
+
+<div class="container">
+  {{#each model as |pokemon|}} {{pokemon-item pokemon=pokemon}} {{/each}}
+</div>
+
+{{!-- reaproveitamento de componente --}}
+{{simple-pagination nextOffset=nextOffset previousOffset=previousOffset }}
+
+{{!--
+pode ser usado o componente abaixo para o loader
+em vez do loader.hbs padrão do Ember
+--}}
+{{simple-loading loading=showLoading}}

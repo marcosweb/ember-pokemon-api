@@ -1,0 +1,17 @@
+<nav aria-label="Page navigation">
+    <ul class="pager">
+
+        {{#if previousOffset}}
+            <li class="page-item">
+                {{#link-to "pokemons" (query-params limit=20 offset=previousOffset) class="previous"}} Anterior {{/link-to}}
+            </li>
+        {{/if}}
+
+        {{#if nextOffset}}
+            <li class="page-item">
+                {{#link-to "pokemons" (query-params limit=20 offset=nextOffset) class="next"}} Próxima {{/link-to}}
+            </li>
+        {{/if}}
+
+    </ul>
+</nav>

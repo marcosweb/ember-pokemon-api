@@ -1,0 +1,44 @@
+<div class="jumbotron">
+  <h3 class="text-center">{{pokemon.name}}</h3>
+
+  <hr>
+
+  <div class="row">
+
+    {{#each-in pokemon.sprites as |key value|}}
+    {{#if value}}
+
+      <div class="col-xs-6 col-md-3">
+        <span class="thumbnail">
+          <img src="{{value}}" alt="{{key}}">
+        </span>
+      </div>
+
+    {{/if}}
+    {{/each-in}}
+
+  </div>
+
+  <div class="list-group">
+
+    <a href="#" class="list-group-item active">
+      Habilidades
+    </a>
+
+    {{#each pokemon.abilities as |habilitie|}}
+
+      <a href="{{habilitie.ability.url}}" target="_blank" class="list-group-item">
+        {{habilitie.ability.name}}
+      </a>
+
+    {{/each}}
+
+  </div>
+
+  <p class="text-center">
+    <a class="btn btn-primary" href="javascript:history.go(-1)">
+      <i class="fa fa-home"></i> Voltar
+    </a>
+  </p>
+
+</div>
