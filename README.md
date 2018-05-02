@@ -2,7 +2,7 @@
 
 Consumo de API pública de Pokemons utlizando frameword javaScript `Ember`, Bootstrap, Sass, Git, entre outros.
 
-## Demon
+## Demo
 
 * `http://ember-pokemon.s3-website-us-east-1.amazonaws.com`
 
@@ -35,17 +35,17 @@ Você precisará ter instalado os seguintes itens no seu computador:
 * Testes em [http://localhost:4200/tests](http://localhost:4200/tests).
 
 
-### Testes
+## Testes
 
 * `ember test`
 * `ember test --server`
 
-### Build
+## Build
 
 * `ember build` (desenvolvimento)
 * `ember build --environment production` (produção)
 
-### Deploy
+## Deploy
 
 * `ember deploy production` (produção)
 
