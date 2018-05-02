@@ -1,51 +1,55 @@
-# pokemon
+# Pokemon API
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Consumo de API pública de Pokemons utlizando frameword javaScript `Ember`, Bootstrap, Sass, Git, entre outros.
 
-## Prerequisites
+## Demon
 
-You will need the following things properly installed on your computer.
+* `http://ember-pokemon.s3-website-us-east-1.amazonaws.com`
+
+## Tecnologia
+
+* `EmberJS`
+* `Bootstrap`
+* `Git`
+* `EmberJS`
+
+## Pré-requisitos
+
+Você precisará ter instalado os seguintes itens no seu computador:
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
 
-## Installation
+## Instalação
 
-* `git clone <repository-url>` this repository
+* `git clone git@github.com:marcosweb/ember-pokemon-api.git`
 * `cd pokemon`
-* `npm install`
+* `yarn install`
 
-## Running / Development
+## Executando em Desenvolvimento
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+* `ember s`
+* Acesse localmente em [http://localhost:4202](http://localhost:4200).
+* Testes em [http://localhost:4200/tests](http://localhost:4200/tests).
 
-### Code Generators
 
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
+### Testes
 
 * `ember test`
 * `ember test --server`
 
-### Building
+### Build
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+* `ember build` (desenvolvimento)
+* `ember build --environment production` (produção)
 
-### Deploying
+### Deploy
 
-Specify what it takes to deploy your app.
+* `ember deploy production` (produção)
 
-## Further Reading / Useful Links
+## Mais sobre EmberJS
 
 * [ember.js](https://emberjs.com/)
 * [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
