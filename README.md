@@ -24,8 +24,9 @@ Você precisará ter instalado os seguintes itens no seu computador:
 ## Executando em Desenvolvimento
 
 * `ember s`
+
 * Acesse localmente em [http://localhost:4202](http://localhost:4200).
-* Testes em [http://localhost:4200/tests](http://localhost:4200/tests).
+* Testes em [http://localhost:4202/tests](http://localhost:4200/tests).
 
 
 ## Testes
