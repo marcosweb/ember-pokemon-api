@@ -1,13 +1,18 @@
 /* eslint-env node */
 'use strict';
 
-import awsCredentials from './credentials';
-
 module.exports = function(deployTarget) {
   let ENV = {
     defaultDeployTarget: 'development',
     build: {},
     locationType: 'hash'
+  };
+
+  const s3 = {
+    accessKeyId: 'AKIAI52YYOAQQFDPPKXQ',
+    secretAccessKey: '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',
+    bucket: 'ember-pokemon',
+    region: 'us-east-1'
   };
 
   if (deployTarget === 'development') {
@@ -20,8 +25,8 @@ module.exports = function(deployTarget) {
 
   if (deployTarget === 'production') {
     ENV.build.environment = 'production';
-    ENV.s3 = awsCredentials,
-    ENV['s3-index'] = awsCredentials
+    ENV.s3 = s3,
+    ENV['s3-index'] = s3
   }
 
   return ENV;
