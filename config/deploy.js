@@ -7,8 +7,8 @@ module.exports = function(deployTarget) {
   };
   
   const s3 = {
-    accessKeyId: 'AKIAJLGG6LXOTSG7DWLA',
-    secretAccessKey: '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',
+    accessKeyId: 'AKIAIMFMQFJXO5WVTWTA',
+    secretAccessKey: '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',
     bucket: 'ember-pokemon',
     region: 'us-east-1'
   };
