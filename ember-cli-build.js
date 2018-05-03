@@ -5,53 +5,45 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
   const env = EmberApp.env() || 'development';
+  const isProduction = EmberApp.env() === 'production';
 
   const fingerprintOptions = {
-    enabled: true
+    enabled: false
   };
 
-  switch (env) {
-    case 'development':
-      fingerprintOptions.prepend = 'http://localhost:4202/';
-    break;
-    case 'production':
-      fingerprintOptions.prepend = 'http://ember-pokemon.s3-website-us-east-1.amazonaws.com/';
-    break;
-  }
-
   let app = new EmberApp(defaults, {
-    fingerprint: fingerprintOptions,
 
     'ember-bootstrap': {
       'bootstrapVersion': 3,
-      'importBootstrapFont': true,
-      'importBootstrapCSS': true
+      'importBootstrapFont': false,
+      'importBootstrapCSS': false
     },
-
+    
     sourcemaps: {
-      enabled: EmberApp.env() !== 'production',
+      enabled: !isProduction,
       extensions: ['js']
     },
 
     sassOptions: {
       extension: 'sass',
-      sourceMap: EmberApp.env() !== 'production'
+      sourceMap: !isProduction
     },
 
     minifyCSS: {
-      enabled: EmberApp.env() === 'production',
+      enabled: isProduction,
       options: { processImport: true }
     },
 
     minifyJS: {
-      enabled: EmberApp.env() === 'production'
+      enabled: isProduction
     },
 
     storeConfigInMeta: false
   });
 
   // inclui um CSS no aplicação em 'vendor.css'
-  app.import('node_modules/bootstrap/dist/css/bootstrap.css');
+  app.import('node_modules/bootstrap/dist/css/bootstrap.min.css');
+  app.import('node_modules/bootstrap/dist/css/bootstrap-theme.min.css');
 
   return app.toTree();
 };

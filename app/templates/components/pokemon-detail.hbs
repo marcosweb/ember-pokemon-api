@@ -1,38 +1,64 @@
 <div class="jumbotron">
-  <h3 class="text-center">{{pokemon.name}}</h3>
+  <h2 class="page-header">{{pokemon.name}}</h2>
 
   <hr>
 
   <div class="row">
-
-    {{#each-in pokemon.sprites as |key value|}}
-    {{#if value}}
-
-      <div class="col-xs-6 col-md-3">
-        <span class="thumbnail">
-          <img src="{{value}}" alt="{{key}}">
-        </span>
-      </div>
-
-    {{/if}}
-    {{/each-in}}
-
+    {{#each sprites as |item|}}
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="{{item.lastObject}}" alt="{{text-normalize item.firstObject}}">
+            <div class="caption">
+              <h3 class="thumbnail__h3">{{text-normalize item.firstObject}}</h3>
+            </div>
+          </div>
+        </div>
+    {{/each}}
   </div>
 
-  <div class="list-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">abilities</div>
+    <table class="table">
+      <tbody>
+        {{#each pokemon.abilities as |habilitie|}}
+          <tr>
+            <td>{{habilitie.ability.name}} [slot {{habilitie.slot}}]</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
 
-    <a href="#" class="list-group-item active">
-      Habilidades
-    </a>
+  <div class="panel panel-default">
+    <div class="panel-heading">Stats</div>
+    <table class="table">
+      <thead> 
+        <tr> 
+          <th>name</th> 
+          <th>effort</th> 
+          <th>base stat</th> 
+        </tr> 
+      </thead>
+      <tbody>
 
-    {{#each pokemon.abilities as |habilitie|}}
+        {{#each pokemon.stats as |stat|}}
+        
+          <tr>
+            <td>{{text-normalize stat.stat.name}}</td>
+            <td>{{stat.effort}}</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{stat.base_stat}}" aria-valuemin="0" aria-valuemax="100" style="width: {{stat.base_stat}}%;">
+                  {{stat.base_stat}}
+                </div>
+              </div>
+            </td>
+          </tr>
 
-      <a href="{{habilitie.ability.url}}" target="_blank" class="list-group-item">
-        {{habilitie.ability.name}}
-      </a>
+        {{/each}}
 
-    {{/each}}
-
+      </tbody>
+    </table>
   </div>
 
   <p class="text-center">
