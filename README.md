@@ -4,7 +4,7 @@ Consumo de API pública de Pokemons utlizando frameword javaScript `Ember`, Boot
 
 ## Demo
 
-[http://pokemon.marcosweb.com.br/pokemons](http://pokemon.marcosweb.com.br)
+[http://pokemon.marcosweb.com.br](http://pokemon.marcosweb.com.br)
 
 ## Pré-requisitos
 
