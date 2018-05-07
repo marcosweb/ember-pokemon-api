@@ -6,10 +6,6 @@ Consumo de API pública de Pokemons utlizando frameword javaScript `Ember`, Boot
 
 [http://ember-pokemon.s3-website-us-east-1.amazonaws.com](http://ember-pokemon.s3-website-us-east-1.amazonaws.com)
 
-ou
-
-[http://pokemon.marcosweb.com.br](http://pokemon.marcosweb.com.br)
-
 ## Pré-requisitos
 
 Você precisará ter instalado os seguintes itens no seu computador:
