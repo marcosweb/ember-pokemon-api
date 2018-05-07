@@ -18,6 +18,7 @@ export default DS.JSONAPIAdapter.extend({
 
   getPokemon(name) {
     const url = `${this.host}/${this.namespace}/pokemon/${name}`;
+    console.log(url);
     return $.getJSON(url).then(results => results);
   }
 
